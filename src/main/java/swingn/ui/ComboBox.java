@@ -1,7 +1,7 @@
 //
 // SwingN - swing-like utilities and widgets for use with tripleplay
-// Copyright (c) 2014, Shamtasm - All rights reserved.
-// http://github.com/shamtasm/swingn/blob/master/LICENSE
+// Copyright (c) 2014, Cupric - All rights reserved.
+// http://github.com/cupric/swingn/blob/master/LICENSE
 
 package swingn.ui;
 
