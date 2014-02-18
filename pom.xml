@@ -15,6 +15,7 @@
   <properties>
     <playn.version>1.9-SNAPSHOT</playn.version>
     <tripleplay.version>1.9-SNAPSHOT</tripleplay.version>
+    <samson.version>1.0-SNAPSHOT</samson.version>
   </properties>
 
   <dependencies>
@@ -22,6 +23,12 @@
       <groupId>com.threerings</groupId>
       <artifactId>tripleplay</artifactId>
       <version>${tripleplay.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.cupric</groupId>
+      <artifactId>samson-core</artifactId>
+      <version>${samson.version}</version>
     </dependency>
 
     <dependency>
