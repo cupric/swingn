@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.cupric</groupId>
+    <artifactId>swingn-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <name>SwingN</name>
+  <artifactId>swingn</artifactId>
+  <description>Some utilities for emulating java.awt and javax.swing using tripleplay.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.threerings</groupId>
+      <artifactId>tripleplay</artifactId>
+      <version>${tripleplay.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.cupric</groupId>
+      <artifactId>samson-core</artifactId>
+      <version>${samson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>13.0</version>
+    </dependency>
+
+    <!-- test dependencies -->
+    <dependency>
+      <groupId>com.googlecode.playn</groupId>
+      <artifactId>playn-java</artifactId>
+      <version>${playn.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
