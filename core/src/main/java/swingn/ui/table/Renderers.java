@@ -21,6 +21,36 @@ import tripleplay.ui.layout.AxisLayout;
 public class Renderers
 {
     /**
+     * Creates a row renderer that just sets the styles on created rows to the provided values.
+     * @param normal stlyes for a table row
+     * @param selected styles for a selected table tow
+     */
+    public static Row basicRow (Styles normal, Styles selected)
+    {
+        return basicRow(normal, normal, selected);
+    }
+
+    /**
+     * Creates a row renderer that just sets the styles on created rows to the provided values.
+     * @param normal styles for an even table row
+     * @param alternate styles for an odd table row
+     * @param selected styles for a selected table tow
+     */
+    public static Renderers.Row basicRow (Styles normal, Styles alternate, Styles selected)
+    {
+        final Styles fnormal = normal.merge(selected);
+        final Styles falt = alternate.merge(selected);
+
+        return new Renderers.Row() {
+            @Override
+            public void update (Provider view, Group row, int rowIdx)
+            {
+                row.addStyles(rowIdx == 0 ? fnormal : falt);
+            }
+        };
+    }
+
+    /**
      * Provides information about the table when performing some rendering operations.
      */
     public interface Provider

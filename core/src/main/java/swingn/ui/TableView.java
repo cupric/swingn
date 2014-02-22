@@ -24,9 +24,17 @@ import react.Connection;
 import react.Slot;
 import react.UnitSlot;
 import swingn.ui.table.Renderers;
+import swingn.ui.table.Renderers.Cell;
+import tripleplay.ui.Background;
+import tripleplay.ui.Button;
 import tripleplay.ui.Element;
+import tripleplay.ui.Field;
 import tripleplay.ui.Group;
+import tripleplay.ui.Label;
 import tripleplay.ui.MenuHost;
+import tripleplay.ui.Style;
+import tripleplay.ui.Styles;
+import tripleplay.ui.Stylesheet;
 import tripleplay.ui.layout.AxisLayout;
 import tripleplay.util.Tapper;
 import static swingn.Log.log;
@@ -38,6 +46,26 @@ import static swingn.Log.log;
 public class TableView
     implements Renderers.Provider
 {
+    /**
+     * Creates a builder with header style classes bound to the given styles.
+     */
+    public static Stylesheet.Builder makeHeaderStyles (Styles styles)
+    {
+        return Stylesheet.builder().
+                add(Label.class, styles).
+                add(Button.class, styles).
+                add(ElementsWidget.class, styles);
+    }
+
+    /**
+     * Starts off a builder with some desirable bindings for table rows.
+     */
+    public static Stylesheet.Builder makeRowStyles ()
+    {
+        return Stylesheet.builder().
+                add(Field.class, Style.BACKGROUND.is(Background.blank()));
+    }
+
     /**
      * Pops up a tip by the given cell. This does some special things to account for the fact that
      * a {@code TipManager} is not running the show within tables (for performance reasons).
