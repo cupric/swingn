@@ -54,10 +54,10 @@ public class ProgressBar extends GlyphWidget<ProgressBar>
         return new GlyphLayoutData() {
             @Override
             public void layout (float left, float top, float width, float height) {
-                super.layout(left, top, width, height);
                 _bgColor = resolveStyle(BACKGROUND_COLOR);
                 _barColor = resolveStyle(BAR_COLOR);
                 _barImage = resolveStyle(BAR_IMAGE);
+                super.layout(left, top, width, height);
             }
         };
     }
