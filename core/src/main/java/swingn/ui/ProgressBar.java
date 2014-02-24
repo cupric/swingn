@@ -84,7 +84,7 @@ public class ProgressBar extends GlyphWidget<ProgressBar>
 
         // border
         canvas.setStrokeColor(Colors.BLACK);
-        canvas.strokeRect(0, 0, w - 1, h - 1);
+        canvas.strokeRect(0.5f, 0.5f, w - 1, h - 1);
     }
 
     protected int _bgColor, _barColor;
